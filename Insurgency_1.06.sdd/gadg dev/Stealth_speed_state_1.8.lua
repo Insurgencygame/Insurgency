@@ -1,3 +1,4 @@
+
 function gadget:GetInfo()
   return {
     name      = "Speed / Stealth state",
@@ -64,17 +65,17 @@ function gadget:AllowCommand(unitID, unitDefID, teamID, cmdID, cmdParams, cmdOpt
       
        		 if  speedstealthCmdDesc.params[0] == 2 then 
         		
-       				SetUnitCloak(unitID, true, 125)      
+       				SetUnitCloak(unitID, 1, [125])      
         
      		elseif 
      				 speedstealthCmdDesc.params[0] == 3 then 
         		
-        			SetUnitCloak(unitID, true, 250)  
+        			SetUnitCloak(unitID, 1, [250])  
               	  
        		elseif 
-       				 speedstealthCmdDesc.params[0] == 4 then 
+       				 speedstealthCmdDesc.paramso[0] == 4 then 
       			
-        			SetUnitCloak(unitID, true, 800)  
+        			SetUnitCloak(unitID, 1, [800])  
        		end
       
       --you can't edit a single value in the params table for
