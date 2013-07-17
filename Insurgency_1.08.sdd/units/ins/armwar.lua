@@ -1,6 +1,6 @@
 return {
 	armwar = {
-		acceleration = 0.071999996900558,
+		acceleration = 0.38400000333786,
 		brakerate = 0.23800000548363,
 		buildcostenergy = 0,
 		buildcostmetal = 43,

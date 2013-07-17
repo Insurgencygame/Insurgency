@@ -1,6 +1,6 @@
 return {
 	armpw = {
-		acceleration = 0.36000001430511,
+		acceleration = 0.45000001430511,
 		brakerate = 0.20000000298023,
 		buildcostenergy = 0,
 		buildcostmetal = 45,
