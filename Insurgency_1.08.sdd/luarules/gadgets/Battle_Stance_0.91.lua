@@ -40,13 +40,13 @@ local ARMOUR_ASS = 1.3
 
 
 
------setup speedstealth  command
+-----setup command
 
 
 -----The List of units who can change their stance. (units that get this gadget)
 		
 		
-local STEALTHY = {          
+local STANCE = {          
 	[UnitDefNames["armcv"].id] = true,
 	[UnitDefNames["corak"].id] = true,
 	[UnitDefNames["armpw"].id] = true,
@@ -83,7 +83,7 @@ local stanceCmdDesc = {
 
 
 function gadget:UnitCreated(unitID, unitDefID, teamID, builderID)
-	if STEALTHY[unitDefID] then
+	if STANCE[unitDefID] then
    		InsertUnitCmdDesc(unitID, 502, stanceCmdDesc)
     	local ms = UnitDefs[unitDefID].speed
     	stanceList[unitID] = {orgspeed=ms}
@@ -106,7 +106,7 @@ end
 			
 			
 function gadget:AllowCommand(unitID, unitDefID, teamID, cmdID, cmdParams, cmdOptions)
-if STEALTHY[unitDefID] then
+if STANCE[unitDefID] then
     if cmdID == CMD_STANCE then 
      		local cmdDescID = FindUnitCmdDesc(unitID, CMD_STANCE)
      		--Spring.Echo("cmdparams[1]=" .. tostring(cmdParams[1]))
