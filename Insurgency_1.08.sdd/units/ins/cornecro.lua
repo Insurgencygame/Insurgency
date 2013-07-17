@@ -7,7 +7,7 @@ return {
 		builddistance = 96,
 		builder = true,
 		buildpic = "CORNECRO.DDS",
-		buildtime = 20,
+		buildtime = 1000,
 		canassist = true,
 		canmove = true,
 		cancapture = true,
